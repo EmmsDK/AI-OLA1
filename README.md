@@ -89,6 +89,9 @@ Relevant experience was also turned into a binary variable.
 
 
 ### 2. Descriptive Statistics
+- Calculate the mean, median, and standard deviation for numerical
+features.
+- For categorical features, count the frequency of each category.
 
 #### Numerical Features
 
@@ -103,10 +106,6 @@ Standard Deviation: 59.89
 This suggests that training hours vary a lot, with some candidates spending significantly more time on training than others.
 
 #### Categorical Features
-- Calculate the mean, median, and standard deviation for numerical
-features.
-- For categorical features, count the frequency of each category.
-
 We also analyzed the education levels of candidates to understand their academic backgrounds. Here’s how education levels were distributed:
 
 | Education Level      | Count |

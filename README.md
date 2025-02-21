@@ -60,5 +60,94 @@ We looked at the experience for genders.
 
 ![alt text](image-5.png)
 ![alt text](image-6.png)
+![alt text](training_hours_by_gender.png)
+
 
 ## Task 2: Feature Engineering and Descriptive Statistics
+### 1. Feature Engineering
+- Create a new feature by binning a numerical variable into categories
+(e.g., low, medium, high). Put ranges (eg age, into three or four groups
+rather than a continuous distribution)
+- Implement one-hot encoding for a categorical variable
+
+We started with the idea that women might be more represented in cities with a higher developmental index. To explore this, we grouped city_development_index into three categories.
+To make comparisons easier, we created a development category feature by dividing city_development_index into three groups. This made it simpler to analyze gender differences across different levels of city development:
+
+Low Development (0-0.6)
+
+Medium Development (0.6 - 0.8)
+
+High Development (0.8 - 1.0)
+
+We then looked at gender distribution within these groups to see if higher development levels corresponded with a more even gender balance.
+
+Some categorical data was also adjusted to make analysis more straightforward:
+
+Gender was converted into numbers (0 = Female, 1 = Male).
+
+Relevant experience was also turned into a binary variable.
+
+
+### 2. Descriptive Statistics
+
+#### Numerical Features
+
+For the numerical feature, we calculated some key statistics for training_hours:
+
+Mean: 65.19
+
+Median: 47.00
+
+Standard Deviation: 59.89
+
+This suggests that training hours vary a lot, with some candidates spending significantly more time on training than others.
+
+#### Categorical Features
+- Calculate the mean, median, and standard deviation for numerical
+features.
+- For categorical features, count the frequency of each category.
+
+We also analyzed the education levels of candidates to understand their academic backgrounds. Here’s how education levels were distributed:
+
+| Education Level      | Count |
+| ------------------- | ----- |
+| Graduate            | 9167  |
+| Masters             | 3296  |
+| PhD                 | 327   |
+| High School         | 1462  |
+| Other               | 207   |
+
+Most candidates had a Graduate degree, followed by Masters and PhDs. The least common education levels were High School and Other. We also created a bar chart to visualize the distribution of education levels, replacing the previous company type analysis, as we found this more relevant.
+
+### 3. Visualization
+- Use seaborn to create box plots for numerical features to identify
+outliers.
+- Visualize the distribution of categorical features using bar plots.
+
+#### Training Hours: Spotting Outliers
+
+A box plot for training_hours showed that while most candidates had moderate training hours, there were quite a few with extremely high values.
+![alt text](training_hours_boxplot.png)
+
+#### Education Level: Bar Plot of Distribution
+
+A bar plot for the education level of candidates showed that the vast majority of the candidates were Graduates, followed by Masters.
+![alt text](education_level_barplot.png)
+
+
+#### Gender Distribution Across Development Categories
+
+To test our earlier hypothesis, we created pie charts to compare gender proportions across development categories. The findings:
+
+Low Development (0-0.6): Mostly male candidates.
+![alt text](low-pie-chart.png)
+
+
+Medium Development (0.6 - 0.8): Still very male-dominated, but slightly more balanced.
+![alt text](medium-pie-chart.png)
+
+
+High Development (0.8 - 1.0): The most even distribution, but only slightly more so than the previous one.
+![alt text](high-pie-chart.png)
+
+This supports our initial idea that women are more likely to be represented in cities with a higher development index.

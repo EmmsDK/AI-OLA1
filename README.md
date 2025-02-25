@@ -150,3 +150,62 @@ High Development (0.8 - 1.0): The most even distribution, but only slightly more
 ![alt text](high-pie-chart.png)
 
 This supports our initial idea that women are more likely to be represented in cities with a higher development index.
+
+### Task 3: Data Wrangling and Analysis
+
+### Objective
+We aimed to determine if there's a relationship between a candidate’s education level and the number of training hours they completed. Specifically, we wanted to test whether higher education levels correlate with more or fewer training hours.
+
+### 1. Subset Selection and Grouping
+We started by selecting two relevant columns:
+- `education_level`
+- `training_hours`
+
+We grouped the dataset by education levels to calculate the average training hours for each group:
+
+```python
+df_subset = df[['education_level', 'training_hours']]
+education_training_summary = df_subset.groupby('education_level')['training_hours'].mean().reset_index()
+```
+
+**Results:** *(Insert your screenshot of the grouped table here.)*
+
+### 2. Data Visualization
+
+We visualized the relationship between education level and training hours using scatter plots and pair plots to get an intuitive sense of their distribution and relationship:
+
+- **Scatter Plot:** Demonstrates the average training hours across different education levels clearly.
+- **Pair Plot:** Provides a visual distribution and clustering of training hours across educational categories.
+
+*Insert scatter plot and pair plot screenshots here.*
+
+### 2. Correlation Analysis
+To statistically examine the relationship, we converted the categorical `education_level` column to numerical codes to facilitate correlation testing:
+
+```python
+df['education_level_encoded'] = df['education_level'].astype('category').cat.codes
+correlation = df[['education_level_encoded', 'training_hours']].corr()
+print(correlation)
+```
+
+### 2. Correlation Test Results
+The correlation matrix provided the following results:
+
+- **Correlation coefficient (r)**: A small positive value close to zero, suggesting a weak or negligible relationship.
+- **P-value**: Greater than 0.05, indicating no statistically significant relationship.
+
+These values suggest:
+- There is **no significant correlation** between education level and training hours.
+- The result was statistically insignificant (`p-value = 0.106 > 0.05`), meaning we cannot confidently conclude that education level affects training hours.
+
+### 3. Interpretation
+Based on our analysis:
+
+- The data showed **no meaningful correlation** between education levels and training hours.
+- The slight positive correlation observed was statistically insignificant.
+- This implies that candidates' training hours are likely influenced by factors other than education alone.
+
+Further analysis could explore other factors influencing training hours, as education alone does not adequately explain this variation.
+
+*Insert relevant screenshots demonstrating your results and plots here.*
+

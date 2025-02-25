@@ -168,7 +168,7 @@ df_subset = df[['education_level', 'training_hours']]
 education_training_summary = df_subset.groupby('education_level')['training_hours'].mean().reset_index()
 ```
 
-**Results:** *(Insert your screenshot of the grouped table here.)*
+![alt text](screenshot1.png)
 
 ### 2. Data Visualization
 
@@ -177,7 +177,8 @@ We visualized the relationship between education level and training hours using 
 - **Scatter Plot:** Demonstrates the average training hours across different education levels clearly.
 - **Pair Plot:** Provides a visual distribution and clustering of training hours across educational categories.
 
-*Insert scatter plot and pair plot screenshots here.*
+![alt text](screenshot2.png)
+![alt text](screenshot2.1.png)
 
 ### 2. Correlation Analysis
 To statistically examine the relationship, we converted the categorical `education_level` column to numerical codes to facilitate correlation testing:
@@ -206,6 +207,4 @@ Based on our analysis:
 - This implies that candidates' training hours are likely influenced by factors other than education alone.
 
 Further analysis could explore other factors influencing training hours, as education alone does not adequately explain this variation.
-
-*Insert relevant screenshots demonstrating your results and plots here.*
 

@@ -190,6 +190,8 @@ print(correlation)
 ```
 
 ### 2. Correlation Test Results
+![alt text](speaman-pvalue.png)
+
 The correlation matrix provided the following results:
 
 - **Correlation coefficient (r)**: A small positive value close to zero, suggesting a weak or negligible relationship.

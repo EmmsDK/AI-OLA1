@@ -1,5 +1,10 @@
 # AI/Machine Learning - OLA1
 
+## Group members:
+### Patrick Juul Diekmann - cph-pd66@cphbusiness.dk
+### Emilio Castro Lagunas - cph-ec100@cphbusiness.dk
+### Frederik Hess Pedersen - cph-fp103@cphbusiness.dk
+### William Foss Nielsen - cph-wn11@cphbusiness.dk
 
 ## Task 1: Data Exploration and Cleaning
 
